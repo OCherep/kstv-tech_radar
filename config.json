@@ -1,0 +1,302 @@
+{
+  "date": "2026.09",
+  "entries": [
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Java (Wildfire)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Kotlin (Popcorn)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Swift (Apple TV)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Angular (vmd-ng-client)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "Go (ad-stitcher)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 0,
+      "label": "TypeScript",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 1,
+      "label": "Spring Boot",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 0,
+      "ring": 2,
+      "label": "Kotlin Multiplatform",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 0,
+      "ring": 3,
+      "label": "Legacy Android clients",
+      "active": true,
+      "moved": 0
+    },
+
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "AWS (eu-west-1)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "CloudFormation (CF-module-NEW)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Spotinst Elastigroup",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "ALB + WAF",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Route53",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "Nginx (onfly / origin)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "S3 (artifacts & media)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 0,
+      "label": "CloudWatch",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "GitHub Actions",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 1,
+      "ring": 1,
+      "label": "Docker (hls-inserter)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 2,
+      "label": "Kubernetes / EKS",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 1,
+      "ring": 2,
+      "label": "OpenTelemetry",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "AMI + S3 tarball bootstrap",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 1,
+      "ring": 3,
+      "label": "Hardcoded secrets in CF",
+      "active": true,
+      "moved": 0
+    },
+
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "MongoDB (sharded)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Redis / ElastiCache",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 0,
+      "label": "Solr",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 2,
+      "ring": 1,
+      "label": "NATS (SCTE-35 pipeline)",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 2,
+      "ring": 2,
+      "label": "Event-Driven Architecture (EDA)",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 2,
+      "ring": 2,
+      "label": "DynamoDB",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 2,
+      "ring": 3,
+      "label": "Legacy Mongo architecture",
+      "active": true,
+      "moved": 0
+    },
+
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "HLS + SCTE-35 SSAI",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "Server-side Ad Insertion (StarAds)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "CDN (multi-CDN / onfly)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 0,
+      "label": "Cookie-based session (Popcorn / Apple TV)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "Microservices migration (M1-M2)",
+      "active": true,
+      "moved": 1
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "BDUI (Backend-Driven UI)",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "Central Security Server (OAuth2)",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 3,
+      "ring": 2,
+      "label": "BFF pattern",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 3,
+      "ring": 2,
+      "label": "Feature flags / progressive delivery",
+      "active": true,
+      "moved": 2
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "jsessionid in URL (Web)",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "Anon-then-login double RTT",
+      "active": true,
+      "moved": 0
+    },
+    {
+      "quadrant": 3,
+      "ring": 3,
+      "label": "Monolith-first new features",
+      "active": true,
+      "moved": 0
+    }
+  ]
+}
