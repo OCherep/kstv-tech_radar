@@ -7,28 +7,31 @@
       "label": "Java (Wildfire / PWF)",
       "active": true,
       "moved": 0,
-      "link": "https://vidmind-dev.atlassian.net/wiki/spaces/KB/pages/3853090821/Monolith+to+Microservices+2026"
+      "link": "https://github.com/VidMind/wildfire"
     },
     {
       "quadrant": 0,
       "ring": 0,
       "label": "Kotlin (Popcorn)",
       "active": true,
-      "moved": 0
+      "moved": 0,
+      "link": "https://github.com/VidMind/popcorn"
     },
     {
       "quadrant": 0,
       "ring": 0,
-      "label": "Swift (Apple TV)",
+      "label": "Swift (Apple TV / iOS libs)",
       "active": true,
-      "moved": 0
+      "moved": 0,
+      "link": "https://github.com/VidMind/ios-wildfireapi"
     },
     {
       "quadrant": 0,
       "ring": 0,
       "label": "Angular (vmd-ng-client)",
       "active": true,
-      "moved": 0
+      "moved": 0,
+      "link": "https://github.com/VidMind/vmd-ng-client"
     },
     {
       "quadrant": 0,
@@ -46,11 +49,27 @@
     },
     {
       "quadrant": 0,
+      "ring": 0,
+      "label": "ArchUnit (new Java services)",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/OCherep/kstv-tech_radar/blob/grok-0.0.1/docs/ARCHUNIT.md"
+    },
+    {
+      "quadrant": 0,
       "ring": 1,
       "label": "Spring Boot / Spring Security",
       "active": true,
       "moved": 0,
       "link": "https://vidmind-dev.atlassian.net/wiki/spaces/KB/pages/2538897427/Sessions+flow+rework"
+    },
+    {
+      "quadrant": 0,
+      "ring": 1,
+      "label": "kstv-backend-commons",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/VidMind/kstv-backend-commons"
     },
     {
       "quadrant": 0,
@@ -141,11 +160,27 @@
     },
     {
       "quadrant": 1,
+      "ring": 1,
+      "label": "configuration-server",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/VidMind/configuration-server"
+    },
+    {
+      "quadrant": 1,
       "ring": 2,
       "label": "Kubernetes / EKS",
       "active": true,
       "moved": 2,
-      "link": "https://vidmind-dev.atlassian.net/wiki/spaces/KB/pages/3783557123/Monolith+to+microserices+migration+2026+phase+1"
+      "link": "https://github.com/VidMind/k8s-manifests"
+    },
+    {
+      "quadrant": 1,
+      "ring": 2,
+      "label": "k8s-manifests",
+      "active": true,
+      "moved": 2,
+      "link": "https://github.com/VidMind/k8s-manifests"
     },
     {
       "quadrant": 1,
@@ -258,7 +293,8 @@
       "ring": 0,
       "label": "Server-side Ad Insertion (StarAds)",
       "active": true,
-      "moved": 0
+      "moved": 0,
+      "link": "https://github.com/VidMind/ads-kstv-ad-provider"
     },
     {
       "quadrant": 3,
@@ -286,6 +322,30 @@
     {
       "quadrant": 3,
       "ring": 1,
+      "label": "authorization-server",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/VidMind/authorization-server"
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "playback-sessions",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/VidMind/playback-sessions"
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
+      "label": "application-gateway",
+      "active": true,
+      "moved": 1,
+      "link": "https://github.com/VidMind/application-gateway"
+    },
+    {
+      "quadrant": 3,
+      "ring": 1,
       "label": "BDUI (Backend-Driven UI)",
       "active": true,
       "moved": 2,
@@ -309,6 +369,30 @@
     },
     {
       "quadrant": 3,
+      "ring": 1,
+      "label": "StarAds services (ads-kstv-*)",
+      "active": true,
+      "moved": 0,
+      "link": "https://github.com/VidMind/ads-kstv-stream-integrator"
+    },
+    {
+      "quadrant": 3,
+      "ring": 2,
+      "label": "Rec-engine (rankmate / hyperion)",
+      "active": true,
+      "moved": 2,
+      "link": "https://github.com/VidMind/rec-app-rankmate"
+    },
+    {
+      "quadrant": 3,
+      "ring": 2,
+      "label": "content-manager",
+      "active": true,
+      "moved": 2,
+      "link": "https://github.com/VidMind/content-manager"
+    },
+    {
+      "quadrant": 3,
       "ring": 2,
       "label": "BFF pattern",
       "active": true,
@@ -320,6 +404,14 @@
       "label": "Feature flags / progressive delivery",
       "active": true,
       "moved": 2
+    },
+    {
+      "quadrant": 3,
+      "ring": 2,
+      "label": "DORA metrics tracking",
+      "active": true,
+      "moved": 2,
+      "link": "https://github.com/OCherep/kstv-tech_radar/blob/grok-0.0.1/docs/DORA.md"
     },
     {
       "quadrant": 3,
