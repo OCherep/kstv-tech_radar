@@ -2,6 +2,8 @@
 
 Технологічний радар платформи **Kyivstar TV / Vidmind (KSTV)**.
 
+> **Part of [DevOps Hub](https://github.com/OCherep/devops-hub)** — єдина точка входу до OnCall, Radar та наступних інструментів.
+
 Візуалізація поточного стану технологій, які ми використовуємо, пробуємо або свідомо уникаємо.
 
 ## Жива версія
@@ -22,15 +24,15 @@ python3 -m http.server 8000
 |------|-------------|
 | `index.html` | Сторінка радара + пояснення |
 | `config.json` | Список технологій (entries) + дата |
-| `radar.js` | Візуалізація (на базі [zalando/tech-radar](https://github.com/zalando/tech-radar)) |
 | `radar.css` | Стилі |
+| `docs/` | ArchUnit, DORA, metrics, automation, proposals |
 
 ## Квадранти
 
-1. **Languages & Frameworks** — Java, Kotlin, Swift, Angular, Go…
-2. **Infrastructure & Cloud** — AWS, CloudFormation, Spotinst, Nginx, observability…
+1. **Languages & Frameworks** — Java, Kotlin, Swift, Angular, Go, ArchUnit…
+2. **Infrastructure & Cloud** — AWS, CloudFormation, Spotinst, Nginx, K8s…
 3. **Data & Storage** — MongoDB, Redis, Solr, NATS, EDA…
-4. **Techniques, Streaming & Clients** — HLS/SSAI, session model, microservices migration, BDUI…
+4. **Techniques, Streaming & Clients** — HLS/SSAI, session model, microservices, StarAds…
 
 ## Кільця
 
@@ -46,6 +48,13 @@ python3 -m http.server 8000
 3. Зробити PR / commit у гілку `grok-0.0.1` (або main).
 4. Обговорити з eng-командами зміни кілець.
 
+## Пов’язані проєкти
+
+| Проєкт | Роль |
+|--------|------|
+| [DevOps Hub](https://github.com/OCherep/devops-hub) | Центральний портал |
+| [OnCall System](https://github.com/OCherep/oncall-system) | Чергування / звернення / дейлі |
+
 ## Походження
 
 - Ідея: ThoughtWorks Technology Radar
@@ -53,4 +62,4 @@ python3 -m http.server 8000
 
 ---
 
-**v0.0.1** — перший драфт (вересень 2026). Потрібна валідація з командами.
+**v0.0.3** — ArchUnit ADOPT, DORA docs, VidMind platform services (вересень 2026).
