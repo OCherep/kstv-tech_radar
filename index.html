@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="description" content="KSTV (Kyivstar TV / Vidmind) Tech Radar — інструмент для візуалізації технологічних рішень платформи">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KSTV Tech Radar</title>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://zalando.github.io/tech-radar/release/radar-0.12.js"></script>
+
+  <link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+  <svg id="radar"></svg>
+
+  <script>
+    fetch('./config.json').then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      radar_visualization({
+        repo_url: "https://github.com/OCherep/kstv-tech_radar",
+        title: "KSTV Tech Radar",
+        date: data.date,
+        print_layout: true,
+        links_in_new_tabs: true,
+        font_family: "Arial, Helvetica, sans-serif",
+        quadrants: [
+          { name: "Languages & Frameworks" },
+          { name: "Infrastructure & Cloud" },
+          { name: "Data & Storage" },
+          { name: "Techniques, Streaming & Clients" }
+        ],
+        rings: [
+          { name: "ADOPT", color: "#5ba300" },
+          { name: "TRIAL", color: "#009eb0" },
+          { name: "ASSESS", color: "#c7ba00" },
+          { name: "HOLD", color: "#e09b96" }
+        ],
+        entries: data.entries
+      });
+    }).catch(function (err) {
+      console.log('Error loading config.json', err);
+    });
+  </script>
+
+  <table>
+    <tr>
+      <td>
+        <h3>Що таке Tech Radar?</h3>
+        <p>
+          KSTV Tech Radar — це список технологій платформи Kyivstar TV / Vidmind разом з оцінкою (ring assignment).
+          Використовуємо чотири кільця:
+        </p>
+        <ul>
+          <li><strong>ADOPT</strong> — технології, в яких маємо високу впевненість, вони працюють у продакшені в потрібному масштабі, низький ризик, рекомендуємо для нових проєктів.</li>
+          <li><strong>TRIAL</strong> — технології, які вже успішно застосували на реальних задачах; є перший серйозний досвід, можна масштабувати з обережністю.</li>
+          <li><strong>ASSESS</strong> — перспективні технології з потенційною цінністю; варто інвестувати в дослідження та прототипи.</li>
+          <li><strong>HOLD</strong> — не рекомендуємо для нових проєктів (існуючі можна підтримувати). Зазвичай технічний борг або застарілі підходи.</li>
+        </ul>
+      </td>
+      <td>
+        <h3>Навіщо нам це?</h3>
+        <p>
+          Tech Radar допомагає командам KSTV обирати технології узгоджено, зменшує хаотичне розростання стеку,
+          робить знання видимими та підтримує еволюцію платформи (від моноліту Wildfire до мікросервісів,
+          покращення клієнтів, SSAI, інфраструктури).
+        </p>
+        <p>
+          Базується на ідеях <a href="https://www.thoughtworks.com/radar" target="_blank" rel="noopener">ThoughtWorks</a>
+          та відкритій візуалізації <a href="https://github.com/zalando/tech-radar" target="_blank" rel="noopener">Zalando</a>.
+        </p>
+        <p>
+          <em>Перша версія (v0.0.1) — драфт. Потрібна дискусія з eng-командами для уточнення кілець і додавання/прибирання entries.</em>
+        </p>
+        <p>
+          Репозиторій: <a href="https://github.com/OCherep/kstv-tech_radar">OCherep/kstv-tech_radar</a>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
