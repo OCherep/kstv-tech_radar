@@ -36,7 +36,7 @@
         repo_url: "https://github.com/OCherep/kstv-tech_radar",
         title: "KSTV Tech Radar",
         date: data.date,
-        print_layout: true,
+        print_layout: false,
         links_in_new_tabs: true,
         font_family: "Arial, Helvetica, sans-serif",
         quadrants: [
@@ -99,17 +99,26 @@
 <script src="/chrome.js">
     function paintRadarTheme(){
       var dark = document.documentElement.getAttribute('data-theme')!=='light';
-      var svg = document.getElementById('radar');
+      var svg = document.querySelector('#radar svg') || document.getElementById('radar');
       if(!svg) return;
-      svg.style.background = dark ? '#0b1020' : '#ffffff';
-      svg.querySelectorAll('rect').forEach(function(r){
-        var f=r.getAttribute('fill')||'';
-        if(f==='#fff'||f==='#ffffff'||f==='white'||f==='') r.setAttribute('fill', dark?'#0b1020':'#ffffff');
-      });
-      svg.querySelectorAll('text').forEach(function(t){
-        var f=(t.getAttribute('fill')||'').toLowerCase();
-        if(!f || f==='#000' || f==='black' || f==='#333' || f==='#222' || f==='#111') t.setAttribute('fill', dark?'#e8eefc':'#111');
-      });
+      var bg = dark ? '#0b1020' : '#ffffff';
+      var fg = dark ? '#e8eefc' : '#111111';
+      svg.style.background = bg;
+      svg.style.color = fg;
+      function walk(n){
+        if(!n || n.nodeType!==1) return;
+        var tag=n.tagName.toLowerCase();
+        var f=(n.getAttribute('fill')||'').toLowerCase();
+        var s=(n.getAttribute('stroke')||'').toLowerCase();
+        if(tag==='rect' && (f==='#fff'||f==='#ffffff'||f==='white'||f===''||f==='#f2f2f2'||f==='#eee')) n.setAttribute('fill', bg);
+        if(tag==='svg') n.style.background=bg;
+        if(tag==='text' && ( !f || f==='#000'||f==='black'||f==='#333'||f==='#222'||f==='#111'||f==='#050c1b')) n.setAttribute('fill', fg);
+        if(s==='#fff'||s==='white') n.setAttribute('stroke', dark?'#334155':'#ccc');
+        for(var i=0;i<n.children.length;i++) walk(n.children[i]);
+      }
+      walk(svg);
+      var host=document.getElementById('radar');
+      if(host){ host.style.background=bg; }
     }
     document.addEventListener('click', function(){ setTimeout(paintRadarTheme, 50); });
     setTimeout(paintRadarTheme, 400);
