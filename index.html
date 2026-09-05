@@ -130,6 +130,47 @@
     setTimeout(paintRadarTheme, 400);
     setTimeout(paintRadarTheme, 1200);
 
+    function bindRadarListHover(){
+      var svg=document.querySelector('#radar svg')||document.getElementById('radar');
+      if(!svg||svg.dataset.hoverBound) return;
+      svg.dataset.hoverBound='1';
+      var texts=[].slice.call(svg.querySelectorAll('text'));
+      function ringColorFrom(node){
+        var g=node;
+        while(g && g!==svg){
+          var c=g.getAttribute && (g.getAttribute('fill')||g.getAttribute('stroke'));
+          if(c && /^#/.test(c) && c.toLowerCase()!=='#0b1020' && c.toLowerCase()!=='#ffffff') return c;
+          g=g.parentNode;
+        }
+        return '#38bdf8';
+      }
+      function highlight(label, color, on){
+        if(!label) return;
+        var key=label.replace(/^\s*\d+\.?\s*/,'').slice(0,28).toLowerCase();
+        texts.forEach(function(t){
+          var s=(t.textContent||'').toLowerCase();
+          if(s.indexOf(key)>=0 || key.indexOf(s.slice(0,16))>=0){
+            t.style.fill = on ? color : '';
+            t.setAttribute('font-weight', on ? '700' : '400');
+          }
+        });
+      }
+      svg.addEventListener('mouseover', function(e){
+        var t=e.target;
+        if(!t) return;
+        var label=t.getAttribute('title')||t.textContent||'';
+        var g=t.closest ? t.closest('g') : t.parentNode;
+        if(g && g.querySelector('title')) label=g.querySelector('title').textContent||label;
+        highlight(label, ringColorFrom(t), true);
+      });
+      svg.addEventListener('mouseout', function(e){
+        texts.forEach(function(t){ t.style.fill=''; t.setAttribute('font-weight','400'); });
+      });
+    }
+    setTimeout(bindRadarListHover, 800);
+    setTimeout(bindRadarListHover, 2000);
+
+
 </script>
 </body>
 </html>
