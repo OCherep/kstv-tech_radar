@@ -23,3 +23,7 @@ td {
 .hover-underline:hover {
   text-decoration: underline;
 }
+
+html,body { background: var(--bg, #0b1020); color: var(--text, #e8eefc); margin:0; }
+[data-theme="light"] #radar { background:#fff; }
+[data-theme="dark"] #radar { background:#0b1020; }
