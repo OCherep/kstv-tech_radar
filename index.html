@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+<script>document.documentElement.setAttribute("data-theme",(function(){try{var m=localStorage.getItem("ops_theme")||localStorage.getItem("oncall_theme")||"system";if(m==="light"||m==="dark")return m;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}catch(e){return"dark"}})());</script>
 
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -10,10 +11,20 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://zalando.github.io/tech-radar/release/radar-0.12.js"></script>
 
+  <link rel="stylesheet" href="/theme.css">
   <link rel="stylesheet" href="radar.css">
 </head>
 
 <body>
+  <header class="header" style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--border,#243056)">
+    <strong>KSTV Tech Radar</strong>
+    <div class="theme-switch">
+      <button type="button" data-theme-btn="system" onclick="opsSetTheme('system')">Авто</button>
+      <button type="button" data-theme-btn="light" onclick="opsSetTheme('light')">☀</button>
+      <button type="button" data-theme-btn="dark" onclick="opsSetTheme('dark')">☾</button>
+      <a href="/" style="margin-left:12px">Hub</a>
+    </div>
+  </header>
 
   <svg id="radar"></svg>
 
@@ -83,5 +94,6 @@
     </tr>
   </table>
 
+  <script src="/theme.js"></script>
 </body>
 </html>
