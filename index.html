@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" data-hub-service="kstv-tech-radar">
 <script>document.documentElement.setAttribute("data-theme",(function(){try{var m=localStorage.getItem("ops_theme")||localStorage.getItem("oncall_theme")||"system";if(m==="light"||m==="dark")return m;return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}catch(e){return"dark"}})());</script>
 
 <head>
@@ -22,7 +22,7 @@
       <button type="button" data-theme-btn="system" onclick="opsSetTheme('system')">Авто</button>
       <button type="button" data-theme-btn="light" onclick="opsSetTheme('light')">☀</button>
       <button type="button" data-theme-btn="dark" onclick="opsSetTheme('dark')">☾</button>
-      <a href="/" style="margin-left:12px">Hub</a>
+      <button type="button" class="btn" id="hub-login-btn">Увійти</button><span id="hub-who"></span><span id="hub-date-chip" class="date-chip"></span><a href="/" style="margin-left:12px">Hub</a>
     </div>
   </header>
 
@@ -94,6 +94,8 @@
     </tr>
   </table>
 
-  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<script src="/chrome.js"></script>
 </body>
 </html>
