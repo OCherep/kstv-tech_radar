@@ -96,6 +96,25 @@
 
   <link rel="stylesheet" href="/chrome.css">
 <script src="/theme.js"></script>
-<script src="/chrome.js"></script>
+<script src="/chrome.js">
+    function paintRadarTheme(){
+      var dark = document.documentElement.getAttribute('data-theme')!=='light';
+      var svg = document.getElementById('radar');
+      if(!svg) return;
+      svg.style.background = dark ? '#0b1020' : '#ffffff';
+      svg.querySelectorAll('rect').forEach(function(r){
+        var f=r.getAttribute('fill')||'';
+        if(f==='#fff'||f==='#ffffff'||f==='white'||f==='') r.setAttribute('fill', dark?'#0b1020':'#ffffff');
+      });
+      svg.querySelectorAll('text').forEach(function(t){
+        var f=(t.getAttribute('fill')||'').toLowerCase();
+        if(!f || f==='#000' || f==='black' || f==='#333' || f==='#222' || f==='#111') t.setAttribute('fill', dark?'#e8eefc':'#111');
+      });
+    }
+    document.addEventListener('click', function(){ setTimeout(paintRadarTheme, 50); });
+    setTimeout(paintRadarTheme, 400);
+    setTimeout(paintRadarTheme, 1200);
+
+</script>
 </body>
 </html>
