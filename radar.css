@@ -27,3 +27,6 @@ td {
 html,body { background: var(--bg, #0b1020); color: var(--text, #e8eefc); margin:0; }
 [data-theme="light"] #radar { background:#fff; }
 [data-theme="dark"] #radar { background:#0b1020; }
+
+#radar, #radar svg { background: var(--bg, #0b1020) !important; }
+[data-theme="light"] #radar, [data-theme="light"] #radar svg { background:#fff !important; }
