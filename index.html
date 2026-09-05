@@ -22,7 +22,13 @@
       <button type="button" data-theme-btn="system" onclick="opsSetTheme('system')">Авто</button>
       <button type="button" data-theme-btn="light" onclick="opsSetTheme('light')">☀</button>
       <button type="button" data-theme-btn="dark" onclick="opsSetTheme('dark')">☾</button>
-      <button type="button" class="btn" id="hub-login-btn">Увійти</button><span id="hub-who"></span><span id="hub-date-chip" class="date-chip"></span><a href="/" style="margin-left:12px">Hub</a>
+      <button type="button" class="btn" id="hub-login-btn">Увійти</button>
+      <span id="hub-who"></span>
+      <span id="hub-date-chip" class="date-chip"></span>
+      <div class="nav-dd">
+        <button type="button" class="btn" onclick="document.getElementById('hub-tools-menu').classList.toggle('open')">Інструменти ▾</button>
+        <div id="hub-tools-menu" class="nav-menu"></div>
+      </div>
     </div>
   </header>
 
@@ -36,7 +42,7 @@
         repo_url: "https://github.com/OCherep/kstv-tech_radar",
         title: "KSTV Tech Radar",
         date: data.date,
-        print_layout: false,
+        print_layout: true,
         links_in_new_tabs: true,
         font_family: "Arial, Helvetica, sans-serif",
         quadrants: [
