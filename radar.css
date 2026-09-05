@@ -30,3 +30,13 @@ html,body { background: var(--bg, #0b1020); color: var(--text, #e8eefc); margin:
 
 #radar, #radar svg { background: var(--bg, #0b1020) !important; }
 [data-theme="light"] #radar, [data-theme="light"] #radar svg { background:#fff !important; }
+
+[data-theme="dark"] #radar text {
+  fill: #94a3b8 !important;
+}
+[data-theme="dark"] #radar text:hover,
+[data-theme="dark"] #radar .blip:hover text,
+[data-theme="dark"] #radar g:hover text {
+  fill: #f8fafc !important;
+}
+[data-theme="light"] #radar text { fill: #334155; }
